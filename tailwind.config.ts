@@ -60,6 +60,8 @@ const config = {
           brown: "#B29079",
           cream: "#EFE7DA",
           beige: "#E1DACA",
+          offWhite: "#fefef7",
+          sand: "#d8ccae",
         },
       },
       borderRadius: {

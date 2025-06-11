@@ -24,15 +24,15 @@ import { BackgroundPattern } from "@/components/background-pattern"
 export default function LandingPage() {
   return (
     <div className="flex min-h-screen flex-col bg-[url('/subtle-pattern.png')] bg-repeat">
-      <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="sticky top-0 z-40 w-full bg-custom-offWhite/95 backdrop-blur supports-[backdrop-filter]:bg-custom-offWhite/60">
         {/* Top Bar with Social Media */}
-        <div className="border-b border-muted/20 bg-custom-brown text-white">
+        <div className="border-b border-custom-sand/20 bg-custom-sand text-custom-offWhite">
           <div className="container flex h-10 items-center justify-end">
             <div className="flex items-center gap-4">
               <Link
                 href="https://wa.me/5551XXXXXXXXX"
                 target="_blank"
-                className="flex items-center gap-1 text-xs hover:text-custom-beige transition-colors"
+                className="flex items-center gap-1 text-xs hover:text-custom-offWhite transition-colors"
               >
                 <Phone className="h-3 w-3" />
                 WhatsApp
@@ -40,7 +40,7 @@ export default function LandingPage() {
               <Link
                 href="https://instagram.com/saudecompaixao"
                 target="_blank"
-                className="flex items-center gap-1 text-xs hover:text-custom-beige transition-colors"
+                className="flex items-center gap-1 text-xs hover:text-custom-offWhite transition-colors"
               >
                 <Instagram className="h-3 w-3" />
                 @saudecompaixao
@@ -50,32 +50,38 @@ export default function LandingPage() {
         </div>
 
         {/* Main Navigation */}
-        <div className="container flex h-16 items-center justify-between">
+        <div className="container flex h-20 items-center justify-between">
           <div className="flex items-center gap-2">
-            <Heart className="h-6 w-6 text-custom-brown" />
-            <span className="text-lg font-semibold">Dra. Geovana Paixão Tegon</span>
+            {/* Placeholder for Logo/Icon */}
+            <div className="h-10 w-10 bg-custom-sand flex items-center justify-center">
+                <span className="text-custom-offWhite font-bold text-xl"> <Heart className="h-6 w-6" /></span>
+            </div>
+            <div className="flex flex-col">
+                <span className="text-lg font-semibold text-custom-sand">DRA. GEOVANA P. TEGON</span>
+                <span className="text-xs text-muted-foreground">MÉDICA DE FAMÍLIA</span>
+            </div>
           </div>
-          <nav className="hidden md:flex gap-6">
-            <Link href="#home" className="text-sm font-medium hover:text-custom-brown transition-colors">
+          <nav className="hidden md:flex gap-6 mx-auto">
+            <Link href="#home" className="text-sm font-medium hover:text-custom-sand transition-colors">
               Home
             </Link>
-            <Link href="#tratamentos" className="text-sm font-medium hover:text-custom-brown transition-colors">
+            <Link href="#tratamentos" className="text-sm font-medium hover:text-custom-sand transition-colors">
               Tratamentos
             </Link>
-            <Link href="#diferenciais" className="text-sm font-medium hover:text-custom-brown transition-colors">
+            <Link href="#diferenciais" className="text-sm font-medium hover:text-custom-sand transition-colors">
               Diferenciais
             </Link>
-            <Link href="#sobre" className="text-sm font-medium hover:text-custom-brown transition-colors">
+            <Link href="#sobre" className="text-sm font-medium hover:text-custom-sand transition-colors">
               Sobre
             </Link>
-            <Link href="#depoimentos" className="text-sm font-medium hover:text-custom-brown transition-colors">
+            <Link href="#depoimentos" className="text-sm font-medium hover:text-custom-sand transition-colors">
               Depoimentos
             </Link>
           </nav>
-          <Button asChild className="hidden md:flex bg-custom-brown hover:bg-custom-brown/90">
+          <Button asChild variant="outline" className="hidden md:flex border-custom-sand text-custom-sand hover:bg-custom-sand hover:text-custom-offWhite font-bold">
             <Link href="https://wa.me/5551XXXXXXXXX" target="_blank">
-              <MessageCircle className="mr-2 h-4 w-4" />
-              Agende sua consulta
+            <MessageCircle className="mr-2 h-5 w-5" />
+              AGENDAR CONSULTA
             </Link>
           </Button>
         </div>
@@ -83,36 +89,39 @@ export default function LandingPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section id="home" className="relative py-20 md:py-28 bg-gradient-to-br from-custom-cream via-blue-50 to-purple-50">
-          <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#B29079_0.5px,transparent_0.5px)] [background-size:20px_20px] opacity-20"></div>
-          <BackgroundPattern className="opacity-40" />
-          <div className="container grid gap-8 md:grid-cols-2 items-center">
-            <div className="space-y-6">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
-                Dra. Geovana Paixão Tegon
-                <span className="block text-lg md:text-xl font-medium text-muted-foreground mt-2">
+        <section id="home" className="relative py-14 md:py-10 bg-white overflow-hidden">
+          <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#d8ccae_0.5px,transparent_0.5px)] [background-size:20px_20px] opacity-10"></div>
+          <BackgroundPattern className="opacity-20" />
+          <div className="container grid gap-8 md:grid-cols-2 items-center relative">
+            <div className="space-y-4 md:space-y-6 z-10">
+            
+              <span className="block text-lg md:text-xl font-medium text-custom-sand mt-2">
                   CRM-RS 60715 | RQE 24411
                 </span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-custom-brown leading-tight">
+                Dra. Geovana Paixão Tegon
               </h1>
-              <p className="text-xl md:text-2xl font-medium text-custom-brown">
-                Médica de Família com foco em <span className="text-custom-brown font-bold">Saúde Mental</span> e <span className="text-custom-brown font-bold">Cuidado Integral</span>
-              </p>
+
               <p className="text-muted-foreground">
                 Atendimento presencial em Taquara e Parobé – RS | Online para todo o Brasil
               </p>
-              <Button asChild size="lg" className="bg-custom-brown hover:bg-custom-brown/90">
-                <Link href="https://wa.me/5551XXXXXXXXX" target="_blank" className="uppercase font-bold">
-                  <MessageCircle className="mr-2 h-5 w-5" />
-                  Agende sua consulta pelo WhatsApp
+              <p className="text-xl md:text-2xl font-medium text-custom-sand">
+                Médica de Família com foco em <span className="text-custom-sand font-bold">Saúde Mental</span> e <span className="text-custom-sand font-bold">Cuidado Integral</span>
+              </p>
+             
+              <Button asChild size="lg" className="bg-custom-sand hover:bg-custom-sand/90 text-custom-offWhite shadow-lg">
+                <Link href="#tratamentos" className="uppercase font-bold">
+                <MessageCircle className="mr-2 h-5 w-5" />
+                AGENDAR CONSULTA
                 </Link>
               </Button>
             </div>
-            <div className="relative h-[300px] md:h-[400px] rounded-lg overflow-hidden">
+            <div className="relative w-full h-[400px] md:h-[600px] lg:h-[600px] flex items-center justify-center mt-10 md:mt-0">
               <Image
-                src="/placeholder.svg?height=400&width=600"
-                alt="Dra. Geovana Paixão Tegon em seu consultório"
+                src="/geovana1.png"
+                alt="Dra. Geovana Paixão Tegon"
                 fill
-                className="object-cover"
+                className="object-contain object-right-bottom transform scale-125"
                 priority
               />
             </div>
@@ -120,16 +129,14 @@ export default function LandingPage() {
         </section>
 
         {/* Treatments Section */}
-        <section id="tratamentos" className="py-16 md:py-24 relative">
-          <BackgroundPattern className="opacity-30" />
+        <section id="tratamentos" className="py-16 md:py-24 relative bg-custom-offWhite">
+          <BackgroundPattern className="opacity-20" />
           <div className="container space-y-12">
             <div className="text-center space-y-4 max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold">Saúde Mental e Cuidado Integral</h2>
+              <h2 className="text-3xl font-bold">Saúde <span className="text-custom-sand">Mental</span>  e Cuidado <span className="text-custom-sand">Integral</span></h2>
               <p className="text-muted-foreground">
                 A saúde mental é parte essencial do cuidado integral. Como médica de família e comunidade, a Dra.
-                Geovana acolhe cada pessoa em sua totalidade — corpo, mente, histórico e contexto. Além de tratar
-                condições como ansiedade e depressão, ela acompanha exames, doenças crônicas e oferece atendimento para
-                todas as fases da vida, desde crianças até idosos.
+                Geovana acolhe cada pessoa em sua totalidade — corpo, mente, histórico e contexto.
               </p>
             </div>
 
@@ -137,41 +144,35 @@ export default function LandingPage() {
               {[
                 {
                   title: "Ansiedade",
-                  icon: <Brain className="h-10 w-10 text-white mx-auto" />,
-                  gradient: "from-blue-500 to-blue-600",
+                  icon: <Brain className="h-10 w-10 text-custom-offWhite mx-auto" />,
                 },
                 {
                   title: "Depressão",
-                  icon: <Heart className="h-10 w-10 text-white mx-auto" />,
-                  gradient: "from-purple-500 to-purple-600",
+                  icon: <Heart className="h-10 w-10 text-custom-offWhite mx-auto" />,
                 },
                 {
                   title: "Insônia",
-                  icon: <Leaf className="h-10 w-10 text-white mx-auto" />,
-                  gradient: "from-indigo-500 to-indigo-600",
+                  icon: <Leaf className="h-10 w-10 text-custom-offWhite mx-auto" />,
                 },
                 {
                   title: "Tabagismo",
-                  icon: <Leaf className="h-10 w-10 text-white mx-auto" />,
-                  gradient: "from-custom-cream to-custom-brown/80",
+                  icon: <Leaf className="h-10 w-10 text-custom-offWhite mx-auto" />,
                 },
                 {
                   title: "TOC",
-                  icon: <Brain className="h-10 w-10 text-white mx-auto" />,
-                  gradient: "from-custom-brown to-custom-brown/80",
+                  icon: <Brain className="h-10 w-10 text-custom-offWhite mx-auto" />,
                 },
                 {
                   title: "Transtorno Afetivo Bipolar",
-                  icon: <Heart className="h-10 w-10 text-white mx-auto" />,
-                  gradient: "from-cyan-500 to-cyan-600",
+                  icon: <Heart className="h-10 w-10 text-custom-offWhite mx-auto" />,
                 },
               ].map((item, index) => (
                 <Card
                   key={index}
-                  className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden group"
+                  className="border-0 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden group rounded-tr-2xl rounded-br-2xl"
                 >
                   <CardContent
-                    className={`flex flex-col items-center justify-center p-6 text-center h-full bg-gradient-to-br ${item.gradient} text-white relative`}
+                    className={`flex flex-col items-center justify-center p-6 text-center h-full ${index % 2 === 0 ? 'bg-custom-sand' : 'bg-custom-brown'} text-custom-offWhite relative`}
                   >
                     <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div className="relative z-10">
@@ -183,20 +184,20 @@ export default function LandingPage() {
               ))}
             </div>
 
-            <div className="space-y-6 max-w-3xl mx-auto mt-12 p-8 bg-gradient-to-r from-white/90 to-custom-cream/90 backdrop-blur-sm rounded-lg shadow-lg border border-custom-beige">
-              <h3 className="text-2xl font-bold text-center">Atendimento Clínico Geral</h3>
+            <div className="space-y-6 max-w-3xl mx-auto mt-12 p-8 bg-custom-offWhite shadow-sm border border-custom-sand/20">
+              <h3 className="text-2xl font-bold text-center text-custom-sand">Atendimento Clínico Geral</h3>
               <p className="text-muted-foreground">Dra. Geovana também atua como médica de família, oferecendo:</p>
-              <ul className="space-y-2 list-disc pl-6">
+              <ul className="space-y-2 list-disc pl-6 text-muted-foreground">
                 <li>Acompanhamento de doenças crônicas (diabetes, hipertensão, obesidade, tireoide).</li>
                 <li>Consultas de rotina para crianças (puericultura), adultos e idosos.</li>
                 <li>Solicitação de exames e orientações preventivas.</li>
                 <li>Atenção integral à saúde da mulher e do homem.</li>
               </ul>
               <div className="flex justify-center mt-8">
-                <Button asChild size="lg" className="bg-custom-brown hover:bg-custom-brown/90">
+                <Button asChild size="lg" className="bg-custom-sand hover:bg-custom-sand/90 text-custom-offWhite">
                   <Link href="https://wa.me/5551XXXXXXXXX" target="_blank" className="uppercase font-bold">
                     <MessageCircle className="mr-2 h-5 w-5" />
-                    Agende sua consulta pelo WhatsApp
+                    AGENDAR CONSULTA
                   </Link>
                 </Button>
               </div>
@@ -205,11 +206,11 @@ export default function LandingPage() {
         </section>
 
         {/* Differentials Section */}
-        <section id="diferenciais" className="py-16 md:py-24 bg-custom-cream/70 relative">
-          <div className="absolute inset-0 -z-10 h-full w-full bg-custom-cream bg-[radial-gradient(#B29079_0.5px,transparent_0.5px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#B29079_30%,transparent_100%)] opacity-20"></div>
-          <div className="container space-y-12">
+        <section id="diferenciais" className="relative py-16 md:py-24 bg-cover bg-center" style={{ backgroundImage: "url('/bannerbranco.png')" }}>
+          <div className="absolute inset-0 bg-custom-offWhite opacity-70"></div> {/* Overlay para manter legibilidade */}
+          <div className="container space-y-12 relative z-10">
             <div className="text-center space-y-4 max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold">Por que escolher a Dra. Geovana?</h2>
+            <h2 className="text-3xl font-bold">Por que escolher a <span className="text-custom-sand">Dra. Geovana</span></h2>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -218,33 +219,33 @@ export default function LandingPage() {
                   title: "Visão Integral",
                   description:
                     "Avalio não apenas a saúde mental, mas todo o contexto do paciente — exames, histórico clínico e hábitos de vida.",
-                  icon: <Stethoscope className="h-8 w-8 text-custom-brown" />,
+                  icon: <Stethoscope className="h-8 w-8 text-custom-sand" />,
                 },
                 {
                   title: "Médica de Família",
                   description:
                     "Atendimento completo para todas as idades, desde consultas pediátricas até acompanhamento geriátrico.",
-                  icon: <Users className="h-8 w-8 text-custom-brown" />,
+                  icon: <Users className="h-8 w-8 text-custom-sand" />,
                 },
                 {
                   title: "Consultas online",
                   description: "Atendimento para todo o Brasil",
-                  icon: <Globe className="h-8 w-8 text-custom-brown" />,
+                  icon: <Globe className="h-8 w-8 text-custom-sand" />,
                 },
                 {
                   title: "Atendimento domiciliar",
                   description: "Para pacientes com mobilidade reduzida",
-                  icon: <Home className="h-8 w-8 text-custom-brown" />,
+                  icon: <Home className="h-8 w-8 text-custom-sand" />,
                 },
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white/90 backdrop-blur-sm rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 group"
+                  className="bg-custom-offWhite/90 border border-custom-sand/100 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group rounded-tr-2xl rounded-br-2xl"
                 >
-                  <div className="flex items-center justify-center w-16 h-16 bg-custom-cream rounded-full mb-4 group-hover:bg-custom-beige transition-colors">
+                  <div className="flex items-center justify-center w-16 h-16 bg-custom-sand/10 mb-4 group-hover:bg-custom-sand/20 transition-colors">
                     {item.icon}
                   </div>
-                  <h3 className="text-lg font-medium text-custom-brown mb-2">{item.title}</h3>
+                  <h3 className="text-lg font-medium text-custom-sand mb-2">{item.title}</h3>
                   <p className="text-muted-foreground">{item.description}</p>
                 </div>
               ))}
@@ -255,37 +256,37 @@ export default function LandingPage() {
                 {
                   title: "Formação especializada",
                   description: "Medicina de Família e Comunidade",
-                  icon: <GraduationCap className="h-8 w-8 text-custom-brown" />,
+                  icon: <GraduationCap className="h-8 w-8 text-custom-sand" />,
                 },
                 {
                   title: "Ambiente acolhedor",
                   description: "Atendimento humanizado e personalizado",
-                  icon: <Heart className="h-8 w-8 text-custom-brown" />,
+                  icon: <Heart className="h-8 w-8 text-custom-sand" />,
                 },
                 {
                   title: "Atualização constante",
                   description: "Em psiquiatria e saúde mental",
-                  icon: <Award className="h-8 w-8 text-custom-brown" />,
+                  icon: <Award className="h-8 w-8 text-custom-sand" />,
                 },
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white/90 backdrop-blur-sm rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 group"
+                  className="bg-custom-offWhite/90 border border-custom-sand/100 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group rounded-tr-2xl rounded-br-2xl"
                 >
-                  <div className="flex items-center justify-center w-16 h-16 bg-custom-cream rounded-full mb-4 group-hover:bg-custom-beige transition-colors">
+                  <div className="flex items-center justify-center w-16 h-16 bg-custom-sand/10 mb-4 group-hover:bg-custom-sand/20 transition-colors">
                     {item.icon}
                   </div>
-                  <h3 className="text-lg font-medium text-custom-brown mb-2">{item.title}</h3>
+                  <h3 className="text-lg font-medium text-custom-sand mb-2">{item.title}</h3>
                   <p className="text-muted-foreground">{item.description}</p>
                 </div>
               ))}
             </div>
 
             <div className="flex justify-center mt-12">
-              <Button asChild size="lg" className="bg-custom-brown hover:bg-custom-brown/90">
+              <Button asChild size="lg" className="bg-custom-sand hover:bg-custom-sand/90 text-custom-offWhite">
                 <Link href="https://wa.me/5551XXXXXXXXX" target="_blank" className="uppercase font-bold">
                   <MessageCircle className="mr-2 h-5 w-5" />
-                  Converse comigo no WhatsApp
+                  AGENDAR CONSULTA
                 </Link>
               </Button>
             </div>
@@ -293,47 +294,46 @@ export default function LandingPage() {
         </section>
 
         {/* About Section */}
-        <section id="sobre" className="py-16 md:py-24 relative">
-          <BackgroundPattern className="opacity-30" />
+        <section id="sobre" className="py-16 md:py-24 relative bg-custom-offWhite">
+          <BackgroundPattern className="opacity-20" />
           <div className="container">
             <div className="max-w-8xl mx-auto space-y-8">
               <div className="flex flex-col md:flex-row gap-8 items-start">
-                <div className="relative w-full md:w-1/2 aspect-square rounded-2xl overflow-hidden bg-custom-cream flex items-center justify-center p-4">
-                  <div className="text-center">
-                    <User className="h-16 w-16 text-custom-beige mx-auto mb-4" />
-                    <p className="text-sm text-custom-brown">Imagem da Dra. Geovana em breve</p>
-                  </div>
+                <div className="relative w-full md:w-1/2 aspect-square overflow-hidden flex items-center justify-center">
+                  <Image
+                    src="/geovana2.png"
+                    alt="Dra. Geovana Paixão Tegon"
+                    fill
+                    className="object-cover rounded-b-3xl"
+                  />
                 </div>
 
                 <div className="space-y-6 md:w-1/2">
                   <div className="space-y-4 mb-6">
-                    <div className="inline-flex items-center justify-center px-4 py-2 bg-custom-beige rounded-full">
-                      <User className="h-5 w-5 text-custom-brown mr-2" />
-                      <span className="text-custom-brown font-medium">Sobre Mim</span>
+                    <div className="inline-flex items-center justify-center px-4 py-2 bg-custom-sand/10">
+                      <User className="h-5 w-5 text-custom-sand mr-2" />
+                      <span className="text-custom-sand font-medium">Sobre Mim</span>
                     </div>
-                    <h2 className="text-3xl font-bold">Conheça a <span className="text-custom-brown">Dra. Geovana Paixão Tegon</span></h2>
+                    <h2 className="text-3xl font-bold">Conheça a <span className="text-custom-sand">Dra. Geovana Paixão Tegon</span></h2>
                   </div>
                   <p className="text-muted-foreground leading-relaxed">
-                    Médica formada pela <span className="text-custom-beige font-bold">Universidade Federal Fluminense</span>, com residência em Medicina de Família e
-                    Comunidade e pós-graduação em <span className="text-custom-beige font-bold">Psiquiatria</span> pelo Hospital Israelita Albert Einstein. Com 11 anos de
-                    experiência, atuou em comunidades ribeirinhas, áreas rurais e grandes centros, integrando práticas
-                    como acupuntura e meditação ao cuidado tradicional.
+                    Médica formada pela <span className="text-custom-sand font-bold">Universidade Federal Fluminense</span>, com residência em Medicina de Família e
+                    Comunidade e pós-graduação em <span className="text-custom-sand font-bold">Psiquiatria</span> pelo Hospital Israelita Albert Einstein.
                   </p>
 
                   <p className="text-muted-foreground leading-relaxed">
-                    Minha formação em <span className="text-custom-beige font-bold">Medicina de Família e Comunidade</span> me permite cuidar de você e sua família em todas as fases da vida — seja para saúde
-                    mental, prevenção ou tratamento de doenças físicas. Sempre com um olhar amplo, que integra exames,
-                    sintomas e contexto emocional.
+                    Minha formação em <span className="text-custom-sand font-bold">Medicina de Família e Comunidade</span> me permite cuidar de você e sua família em todas as fases da vida.
                   </p>
 
-                  <blockquote className="border-l-4 border-custom-brown pl-4 italic bg-custom-cream/50 p-4 rounded-r-lg">
+                  <blockquote className="border-l-4 border-custom-sand pl-4 italic bg-custom-sand/5 p-4">
                     "Minha missão é cuidar do ser humano por inteiro: corpo, mente e história de vida."
                   </blockquote>
 
                   <div className="pt-4">
-                    <Button asChild className="bg-custom-brown hover:bg-custom-brown/90">
+                    <Button asChild className="bg-custom-sand hover:bg-custom-sand/90 text-custom-offWhite">
                       <Link href="https://wa.me/5551XXXXXXXXX" target="_blank" className="uppercase font-bold">
-                        Agende sua consulta
+                      <MessageCircle className="mr-2 h-5 w-5" />
+                      AGENDAR CONSULTA
                       </Link>
                     </Button>
                   </div>
@@ -344,10 +344,10 @@ export default function LandingPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section id="depoimentos" className="py-16 md:py-24 bg-custom-cream/70 relative">
-          <div className="absolute inset-0 -z-10 h-full w-full bg-custom-cream bg-[radial-gradient(#B29079_0.5px,transparent_0.5px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#B29079_30%,transparent_100%)] opacity-20"></div>
-          <div className="container space-y-12">
-            <h2 className="text-3xl font-bold text-center">O que dizem meus pacientes</h2>
+        <section id="depoimentos" className="relative py-16 md:py-24 bg-cover bg-center" style={{ backgroundImage: "url('/bannerbranco.png')" }}>
+          <div className="absolute inset-0 bg-custom-offWhite opacity-70"></div> {/* Overlay para manter legibilidade */}
+          <div className="container space-y-12 relative z-10">
+            <h2 className="text-3xl font-bold text-center text-custom-sand">O que dizem meus pacientes</h2>
 
             <div className="grid gap-6 md:grid-cols-3">
               {[
@@ -355,20 +355,20 @@ export default function LandingPage() {
                 { text: "Abordagem humanizada que me ajudou a entender minhas emoções.", author: "João P." },
                 { text: "Médica da família que acompanha todas as fases da vida.", author: "Ana C." },
               ].map((testimonial, index) => (
-                <Card key={index} className="bg-white">
+                <Card key={index} className="bg-custom-offWhite/90 border border-custom-sand/20 shadow-md rounded-tr-2xl rounded-br-2xl">
                   <CardContent className="p-6 space-y-4">
-                    <p className="italic">{testimonial.text}</p>
-                    <p className="font-medium text-custom-brown">{testimonial.author}</p>
+                    <p className="italic text-muted-foreground">{testimonial.text}</p>
+                    <p className="font-medium text-custom-sand">{testimonial.author}</p>
                   </CardContent>
                 </Card>
               ))}
             </div>
 
             <div className="flex justify-center mt-8">
-              <Button asChild size="lg" className="bg-custom-brown hover:bg-custom-brown/90">
+              <Button asChild size="lg" className="bg-custom-sand hover:bg-custom-sand/90 text-custom-offWhite">
                 <Link href="https://wa.me/5551XXXXXXXXX" target="_blank" className="uppercase font-bold">
                   <MessageCircle className="mr-2 h-5 w-5" />
-                  Quero agendar minha consulta
+                  AGENDAR CONSULTA
                 </Link>
               </Button>
             </div>
@@ -376,11 +376,11 @@ export default function LandingPage() {
         </section>
 
         {/* FAQ Section */}
-        <section id="faq" className="py-16 md:py-24 relative">
-          <BackgroundPattern className="opacity-30" />
+        <section id="faq" className="py-16 md:py-24 relative bg-custom-offWhite">
+          <BackgroundPattern className="opacity-20" />
           <div className="container">
             <div className="max-w-3xl mx-auto space-y-8">
-              <h2 className="text-3xl font-bold text-center">Dúvidas Comuns</h2>
+              <h2 className="text-3xl font-bold text-center">Perguntas e Respostas</h2>
 
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="item-1">
@@ -403,7 +403,7 @@ export default function LandingPage() {
                 <Button asChild size="lg" className="bg-custom-brown hover:bg-custom-brown/90">
                   <Link href="https://wa.me/5551XXXXXXXXX" target="_blank" className="uppercase font-bold">
                     <MessageCircle className="mr-2 h-5 w-5" />
-                    Fale comigo pelo WhatsApp
+                    AGENDAR CONSULTA
                   </Link>
                 </Button>
               </div>
@@ -412,37 +412,37 @@ export default function LandingPage() {
         </section>
       </main>
 
-      <footer className="border-t bg-muted/40 relative">
-        <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
+      <footer className="border-t border-custom-sand/20 bg-custom-brown relative">
+        <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#d8ccae_1px,transparent_1px)] [background-size:16px_16px] opacity-10"></div>
         <div className="container py-8 md:py-12">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Heart className="h-6 w-6 text-custom-brown" />
-                <span className="text-lg font-semibold">Dra. Geovana Paixão Tegon</span>
+                <Heart className="h-6 w-6 text-custom-sand" />
+                <span className="text-lg font-semibold text-white">Dra. Geovana Paixão Tegon</span>
               </div>
-              <p className="text-sm text-muted-foreground">CRM-RS 60715 | RQE 24411</p>
+              <p className="text-sm text-white">CRM-RS 60715 | RQE 24411</p>
             </div>
 
             <div>
-              <h3 className="text-lg font-medium mb-4">Contato</h3>
+              <h3 className="text-lg font-medium mb-4 text-white">Contato</h3>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
-                  <MessageCircle className="h-4 w-4 text-custom-brown" />
+                  <MessageCircle className="h-4 w-4 text-white" />
                   <Link
                     href="https://wa.me/5551XXXXXXXXX"
                     target="_blank"
-                    className="text-sm hover:text-custom-brown transition-colors"
+                    className="text-sm text-white hover:text-custom-sand transition-colors"
                   >
                     WhatsApp
                   </Link>
                 </div>
                 <div className="flex items-center gap-2">
-                  <User className="h-4 w-4 text-custom-brown" />
+                  <User className="h-4 w-4 text-white" />
                   <Link
                     href="https://instagram.com/saudecompaixao"
                     target="_blank"
-                    className="text-sm hover:text-custom-brown transition-colors"
+                    className="text-sm text-white hover:text-custom-sand transition-colors"
                   >
                     @saudecompaixao
                   </Link>
@@ -451,25 +451,38 @@ export default function LandingPage() {
             </div>
 
             <div>
-              <h3 className="text-lg font-medium mb-4">Links Rápidos</h3>
-              <div className="grid grid-cols-2 gap-2">
-                <Link href="#home" className="text-sm hover:text-custom-brown transition-colors">
+              <h3 className="text-lg font-medium mb-4 text-white">Links Rápidos</h3>
+              <div className="grid grid-cols-1 gap-2">
+                <Link href="#home" className="text-sm text-white hover:text-custom-sand transition-colors">
                   Home
                 </Link>
-                <Link href="#tratamentos" className="text-sm hover:text-custom-brown transition-colors">
+                <Link href="#tratamentos" className="text-sm text-white hover:text-custom-sand transition-colors">
                   Tratamentos
                 </Link>
-                <Link href="#sobre" className="text-sm hover:text-custom-brown transition-colors">
+                <Link href="#sobre" className="text-sm text-white hover:text-custom-sand transition-colors">
                   Sobre
                 </Link>
-                <Link href="#depoimentos" className="text-sm hover:text-custom-brown transition-colors">
+                <Link href="#depoimentos" className="text-sm text-white hover:text-custom-sand transition-colors">
                   Depoimentos
                 </Link>
               </div>
             </div>
+
+            <div>
+              <h3 className="text-lg font-medium mb-4 text-white">Desenvolvido por</h3>
+              <div className="flex justify-start">
+                <Image
+                    src="/logo02.png"
+                    alt="HW"
+                    width={200}
+                    height={60}
+                    className="object-contain"
+                  />
+              </div>
+            </div>
           </div>
 
-          <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
+          <div className="mt-8 pt-8 border-t border-custom-sand/20 text-center text-sm text-white">
             <p>&copy; {new Date().getFullYear()} Dra. Geovana Paixão Tegon. Todos os direitos reservados.</p>
           </div>
         </div>
