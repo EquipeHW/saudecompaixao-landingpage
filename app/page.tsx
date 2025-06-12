@@ -30,7 +30,7 @@ export default function LandingPage() {
           <div className="container flex h-10 items-center justify-end">
             <div className="flex items-center gap-4">
               <Link
-                href="https://wa.me/5551XXXXXXXXX"
+                href="https://wa.me/5549991077291"
                 target="_blank"
                 className="flex items-center gap-1 text-xs hover:text-custom-offWhite transition-colors"
               >
@@ -79,7 +79,7 @@ export default function LandingPage() {
             </Link>
           </nav>
           <Button asChild variant="outline" className="hidden md:flex border-custom-sand text-custom-sand hover:bg-custom-sand hover:text-custom-offWhite font-bold">
-            <Link href="https://wa.me/5551XXXXXXXXX" target="_blank">
+            <Link href="https://wa.me/5549991077291" target="_blank">
             <MessageCircle className="mr-2 h-5 w-5" />
               AGENDAR CONSULTA
             </Link>
@@ -110,7 +110,7 @@ export default function LandingPage() {
               </p>
              
               <Button asChild size="lg" className="bg-custom-sand hover:bg-custom-sand/90 text-custom-offWhite shadow-lg">
-                <Link href="#tratamentos" className="uppercase font-bold">
+                <Link href="https://wa.me/5549991077291" target="_blank" className="uppercase font-bold">
                 <MessageCircle className="mr-2 h-5 w-5" />
                 AGENDAR CONSULTA
                 </Link>
@@ -195,7 +195,7 @@ export default function LandingPage() {
               </ul>
               <div className="flex justify-center mt-8">
                 <Button asChild size="lg" className="bg-custom-sand hover:bg-custom-sand/90 text-custom-offWhite">
-                  <Link href="https://wa.me/5551XXXXXXXXX" target="_blank" className="uppercase font-bold">
+                  <Link href="https://wa.me/5549991077291" target="_blank" className="uppercase font-bold">
                     <MessageCircle className="mr-2 h-5 w-5" />
                     AGENDAR CONSULTA
                   </Link>
@@ -284,7 +284,7 @@ export default function LandingPage() {
 
             <div className="flex justify-center mt-12">
               <Button asChild size="lg" className="bg-custom-sand hover:bg-custom-sand/90 text-custom-offWhite">
-                <Link href="https://wa.me/5551XXXXXXXXX" target="_blank" className="uppercase font-bold">
+                <Link href="https://wa.me/5549991077291" target="_blank" className="uppercase font-bold">
                   <MessageCircle className="mr-2 h-5 w-5" />
                   AGENDAR CONSULTA
                 </Link>
@@ -331,7 +331,7 @@ export default function LandingPage() {
 
                   <div className="pt-4">
                     <Button asChild className="bg-custom-sand hover:bg-custom-sand/90 text-custom-offWhite">
-                      <Link href="https://wa.me/5551XXXXXXXXX" target="_blank" className="uppercase font-bold">
+                      <Link href="https://wa.me/5549991077291" target="_blank" className="uppercase font-bold">
                       <MessageCircle className="mr-2 h-5 w-5" />
                       AGENDAR CONSULTA
                       </Link>
@@ -366,7 +366,7 @@ export default function LandingPage() {
 
             <div className="flex justify-center mt-8">
               <Button asChild size="lg" className="bg-custom-sand hover:bg-custom-sand/90 text-custom-offWhite">
-                <Link href="https://wa.me/5551XXXXXXXXX" target="_blank" className="uppercase font-bold">
+                <Link href="https://wa.me/5549991077291" target="_blank" className="uppercase font-bold">
                   <MessageCircle className="mr-2 h-5 w-5" />
                   AGENDAR CONSULTA
                 </Link>
@@ -391,7 +391,7 @@ export default function LandingPage() {
                 </AccordionItem>
                 <AccordionItem value="item-2">
                   <AccordionTrigger>Quais os valores das consultas?</AccordionTrigger>
-                  <AccordionContent>Presencial: R$ 290 | Online: R$ 230 | Domiciliar: R$ 350.</AccordionContent>
+                  <AccordionContent>Presencial: R$ 330 | Online: R$ 240 | Domiciliar: R$ 400.</AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-3">
                   <AccordionTrigger>Atende por convênios?</AccordionTrigger>
@@ -401,7 +401,7 @@ export default function LandingPage() {
 
               <div className="flex justify-center pt-6">
                 <Button asChild size="lg" className="bg-custom-brown hover:bg-custom-brown/90">
-                  <Link href="https://wa.me/5551XXXXXXXXX" target="_blank" className="uppercase font-bold">
+                  <Link href="https://wa.me/5549991077291" target="_blank" className="uppercase font-bold">
                     <MessageCircle className="mr-2 h-5 w-5" />
                     AGENDAR CONSULTA
                   </Link>
@@ -430,7 +430,7 @@ export default function LandingPage() {
                 <div className="flex items-center gap-2">
                   <MessageCircle className="h-4 w-4 text-white" />
                   <Link
-                    href="https://wa.me/5551XXXXXXXXX"
+                    href="https://wa.me/5549991077291"
                     target="_blank"
                     className="text-sm text-white hover:text-custom-sand transition-colors"
                   >
