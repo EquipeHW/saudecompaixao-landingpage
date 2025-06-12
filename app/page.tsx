@@ -99,7 +99,7 @@ export default function LandingPage() {
                   CRM-RS 60715 | RQE 24411
                 </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-custom-brown leading-tight">
-                Dra. Geovana Paixão Tegon
+                Dra. Geovana <br /> Paixão Tegon
               </h1>
 
               <p className="text-muted-foreground">

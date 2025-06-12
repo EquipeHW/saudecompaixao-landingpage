@@ -20,7 +20,7 @@ const config = {
     },
     extend: {
       fontFamily: {
-        sans: ["Poppins", "sans-serif"],
+        sans: ["Jost", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
