@@ -111,7 +111,7 @@ export default function LandingPage() {
              
               <Button asChild size="lg" className="bg-custom-sand hover:bg-custom-sand/90 text-custom-offWhite shadow-lg">
                 <Link href="https://wa.me/5549991077291" target="_blank" className="uppercase font-bold">
-                <MessageCircle className="mr-2 h-5 w-5" />
+                  <MessageCircle className="mr-2 h-5 w-5" />
                 AGENDAR CONSULTA
                 </Link>
               </Button>
@@ -242,11 +242,11 @@ export default function LandingPage() {
                   key={index}
                   className="bg-custom-offWhite/90 border border-custom-sand/100 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group rounded-tr-2xl rounded-br-2xl"
                 >
-                  <div className="flex items-center justify-center w-16 h-16 bg-custom-sand/10 mb-4 group-hover:bg-custom-sand/20 transition-colors">
+                  <div className="flex items-center mx-auto justify-center w-16 h-16 bg-custom-sand/10 mb-4 group-hover:bg-custom-sand/20 transition-colors">
                     {item.icon}
                   </div>
-                  <h3 className="text-lg font-medium text-custom-sand mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
+                  <h3 className="text-lg font-medium text-custom-sand mb-2 text-center">{item.title}</h3>
+                  <p className="text-muted-foreground text-center">{item.description}</p>
                 </div>
               ))}
             </div>
@@ -273,11 +273,11 @@ export default function LandingPage() {
                   key={index}
                   className="bg-custom-offWhite/90 border border-custom-sand/100 p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group rounded-tr-2xl rounded-br-2xl"
                 >
-                  <div className="flex items-center justify-center w-16 h-16 bg-custom-sand/10 mb-4 group-hover:bg-custom-sand/20 transition-colors">
+                  <div className="flex items-center mx-auto justify-center w-16 h-16 bg-custom-sand/10 mb-4 group-hover:bg-custom-sand/20 transition-colors">
                     {item.icon}
                   </div>
-                  <h3 className="text-lg font-medium text-custom-sand mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
+                  <h3 className="text-lg font-medium text-custom-sand mb-2 text-center">{item.title}</h3>
+                  <p className="text-muted-foreground text-center">{item.description}</p>
                 </div>
               ))}
             </div>
@@ -394,8 +394,14 @@ export default function LandingPage() {
                   <AccordionContent>Presencial: R$ 330 | Online: R$ 240 | Domiciliar: R$ 400.</AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-3">
-                  <AccordionTrigger>Atende por convênios?</AccordionTrigger>
-                  <AccordionContent>Atendimento apenas particular no momento.</AccordionContent>
+                  <AccordionTrigger>A Dra. Geovana atende por plano de saúde?</AccordionTrigger>
+                  <AccordionContent>Visando a um melhor atendimento e visto que as consultas têm duração de 40 min a 1 hora, a Dra. Geovana não atende pelo plano.</AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-4">
+                  <AccordionTrigger>Quanto tempo dura cada consulta?</AccordionTrigger>
+                  <AccordionContent>
+                    As consultas têm duração de 40 minutos a 1 hora, permitindo um atendimento mais completo e personalizado.
+                  </AccordionContent>
                 </AccordionItem>
               </Accordion>
 
