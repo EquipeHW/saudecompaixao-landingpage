@@ -192,7 +192,7 @@ export default function LandingPage() {
               <h3 className="text-2xl font-bold font-display text-center text-[#012840]">Atendimento Clínico Geral</h3>
               <p className="text-muted-foreground">Dra. Geovana também atua como médica de família, oferecendo:</p>
               <ul className="space-y-2 list-disc pl-6 text-muted-foreground">
-                <li>Acompanhamento de doenças crônicas (diabetes, hipertensão, obesidade, tireoide).</li>
+                <li>Acompanhamento de doenças crônicas (diabetes, hipertensão, obesidade, problemas relacionados à tireoide).</li>
                 <li>Consultas de rotina para crianças (puericultura), adultos e idosos.</li>
                 <li>Solicitação de exames e orientações preventivas.</li>
                 <li>Atenção integral à saúde da mulher e do homem.</li>
@@ -348,64 +348,28 @@ export default function LandingPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section id="depoimentos" className="relative py-16 md:py-24 bg-cover bg-center" style={{ backgroundImage: "url('/bannerbranco.png')" }}>
-          <div className="absolute inset-0 bg-custom-offWhite opacity-70"></div> {/* Overlay para manter legibilidade */}
-          <div className="container space-y-12 relative z-10">
-            <h2 className="text-3xl font-bold font-display text-center text-[#012840]">O que dizem meus pacientes</h2>
-
-            <div className="grid gap-6 md:grid-cols-3">
-              {[
-                { text: "A Dra. Geovana é incrível, me senti acolhida desde a primeira consulta.", author: "Maria S." },
-                { text: "Abordagem humanizada que me ajudou a entender minhas emoções.", author: "João P." },
-                { text: "Médica da família que acompanha todas as fases da vida.", author: "Ana C." },
-              ].map((testimonial, index) => (
-                <Card key={index} className="bg-custom-offWhite/90 border border-custom-sand/20 shadow-md rounded-tr-2xl rounded-br-2xl">
-                  <CardContent className="p-6 space-y-4">
-                    <p className="italic text-muted-foreground">{testimonial.text}</p>
-                    <p className="font-medium text-custom-sand">{testimonial.author}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            <div className="flex justify-center mt-8">
-              <Button asChild size="lg" className="bg-custom-sand hover:bg-custom-sand/90 text-custom-offWhite">
-                <Link href="https://wa.me/5549991077291" target="_blank" className="uppercase font-bold">
-                  <MessageCircle className="mr-2 h-5 w-5" />
-                  AGENDAR CONSULTA
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </section>
+    
 
         {/* FAQ Section */}
-        <section id="faq" className="py-16 md:py-24 relative bg-custom-offWhite">
+        <section id="faq" className="py-16 md:py-24 relative bg-custom-offWhite" >
           <BackgroundPattern className="opacity-20" />
           <div className="container">
             <div className="max-w-3xl mx-auto space-y-8">
-              <h2 className="text-3xl font-bold font-display text-center">Perguntas e Respostas</h2>
+              <h2 className="text-3xl font-bold font-display text-left md:text-center">Perguntas e Respostas</h2>
 
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="item-1">
-                  <AccordionTrigger>Como funciona o atendimento online?</AccordionTrigger>
-                  <AccordionContent>
-                    As consultas são realizadas por plataformas seguras, com a mesma qualidade do presencial.
-                  </AccordionContent>
+                  <AccordionTrigger className="text-left">Como funciona o atendimento online?</AccordionTrigger>
+                  <AccordionContent className="text-left">As consultas são realizadas por plataformas seguras, com a mesma qualidade do presencial.</AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-2">
-                  <AccordionTrigger>Quais os valores das consultas?</AccordionTrigger>
-                  <AccordionContent>Presencial: R$ 330 | Online: R$ 240 | Domiciliar: R$ 400.</AccordionContent>
-                </AccordionItem>
+           
                 <AccordionItem value="item-3">
-                  <AccordionTrigger>A Dra. Geovana atende por plano de saúde?</AccordionTrigger>
-                  <AccordionContent>Visando a um melhor atendimento e visto que as consultas têm duração de 40 min a 1 hora, a Dra. Geovana não atende pelo plano.</AccordionContent>
+                  <AccordionTrigger className="text-left">A Dra. Geovana atende por plano de saúde?</AccordionTrigger>
+                  <AccordionContent className="text-left">Visando a um melhor atendimento e visto que as consultas têm duração de 40 min a 1 hora, a Dra. Geovana não atende pelo plano.</AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-4">
-                  <AccordionTrigger>Quanto tempo dura cada consulta?</AccordionTrigger>
-                  <AccordionContent>
-                    As consultas têm duração de 40 minutos a 1 hora, permitindo um atendimento mais completo e personalizado.
-                  </AccordionContent>
+                  <AccordionTrigger className="text-left">Quanto tempo dura cada consulta?</AccordionTrigger>
+                  <AccordionContent className="text-left">As consultas têm duração de 40 minutos a 1 hora, permitindo um atendimento mais completo e personalizado.</AccordionContent>
                 </AccordionItem>
               </Accordion>
 
