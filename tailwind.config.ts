@@ -21,6 +21,7 @@ const config = {
     extend: {
       fontFamily: {
         sans: ["Jost", "sans-serif"],
+        display: ["Gumani", "Jost", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

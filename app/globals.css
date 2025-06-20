@@ -2,8 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Gumani';
+  src: url('/fonts/Gumani.otf') format('opentype'),
+       url('/fonts/Gumani.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Jost', Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: 'Gumani', 'Jost', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.01em;
 }
 
 @layer utilities {
