@@ -415,7 +415,7 @@ export default function LandingPage() {
                   </Link>
                 </div>
                 <div className="flex items-center gap-2">
-                  <User className="h-4 w-4 text-white" />
+                <Instagram className="h-4 w-4 text-white" />
                   <Link
                     href="https://instagram.com/saudecompaixao"
                     target="_blank"
